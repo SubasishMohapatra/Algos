@@ -11,38 +11,53 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            var registar=new CollegeRegistration();
+            var registar = new CollegeRegistration();
 
-            registar.AddColleges(new College() { ID = 1, Name = "Stewart" });
-            registar.AddColleges(new College() { ID = 2, Name = "Christ" });
-            registar.AddColleges(new College() { ID = 3, Name = "Utkal" });
-            registar.AddColleges(new College() { ID = 4, Name = "JKBK" });
-            registar.AddColleges(new College() { ID = 5, Name = "Ravenshaw" });
-            registar.AddColleges(new College() { ID = 6, Name = "City" });
+            new College(registar) { ID = 1, Name = "Stewart" }.Register();
+            new College(registar) { ID = 2, Name = "Christ" }.Register();
+            new College(registar) { ID = 3, Name = "Utkal" }.Register();
+            new College(registar) { ID = 4, Name = "JKBK" }.Register();
+            new College(registar) { ID = 5, Name = "Ravenshaw" }.Register();
+            new College(registar) { ID = 6, Name = "City" }.Register();
 
-            new Student() { Name = "Subasish", StudentID = 1 };
-            new Student() { Name = "Subasish", StudentID = 2 };
-            new Student() { Name = "Subasish", StudentID = 3 };
-            new Student() { Name = "Subasish", StudentID = 4 };
-            new Student() { Name = "Subasish", StudentID = 5 };
-            new Student() { Name = "Subasish", StudentID = 6 };
-            new Student() { Name = "Subasish", StudentID = 7 };
-            new Student() { Name = "Subasish", StudentID = 8 };
-            new Student() { Name = "Subasish", StudentID = 9 };
-            new Student() { Name = "Subasish", StudentID = 10 };
+            var student1 = new Student(registar) { Name = "Subasish", StudentID = 1 };
+            student1.Register(1);
+            student1.Register(5);
+            student1.Register(6);
+            var student2 = new Student(registar) { Name = "Debasish", StudentID = 2 };
+            student2.Register(2);
+            student2.Register(4);
+            var student3 = new Student(registar) { Name = "Sameer", StudentID = 3 };
+            student3.Register(3);
+            student3.Register(5);
+            var student4 = new Student(registar) { Name = "Neha", StudentID = 4 };
+            student4.Register(4);
+            student4.Register(5);
+            var student5 = new Student(registar) { Name = "Roopa", StudentID = 5 };
+            student5.Register(5);
+            student5.Register(6);
+            var student6 = new Student(registar) { Name = "Sam", StudentID = 6 };
+            student6.Register(6);
+            student6.Register(1);
+            var student7 = new Student(registar) { Name = "Harry", StudentID = 7 };
+            student7.Register(1);
+            student7.Register(2);
+            var student8 = new Student(registar) { Name = "Akbar", StudentID = 8 };
+            student8.Register(2);
+            student8.Register(3);
+            student8.Register(4);
+            var student9 = new Student(registar) { Name = "Romeo", StudentID = 9 };
+            student9.Register(5);
+            student9.Register(6);
+            student9.Register(1);
+            var student10 = new Student(registar) { Name = "Duggu", StudentID = 10 };
+            student10.Register(2);
+            student10.Register(3);
+            student10.Register(4);
 
-            registar.Register(1, 5);registar.Register(1, 1);registar.Register(1, 6);
-            registar.Register(2, 2);registar.Register(2, 4);
-            registar.Register(3, 3); registar.Register(3, 5);
-            registar.Register(4, 4); registar.Register(4, 6);
-            registar.Register(5, 5); registar.Register(5, 7);
-            registar.Register(6, 6);
-            registar.Register(7, 7); registar.Register(7, 8);
-            registar.Register(8, 8);
-            registar.Register(9, 9);
-            registar.Register(10, 5); registar.Register(10, 10);
 
-            foreach(var college in registar.GetRegisteredColleges(1))
+            Console.WriteLine($"{student3.Name} has registered for below colleges:");
+            foreach (var college in student3.GetRegisteredColleges())
             {
                 Console.WriteLine($"{college.Name}");
             }

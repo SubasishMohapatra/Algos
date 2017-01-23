@@ -11,18 +11,23 @@ namespace StudentCollegeRegistration
         Dictionary<int, List<int>> registrations = new Dictionary<int, List<int>>();
         List<College> colleges = new List<College>();
 
-        public void AddColleges(College college)
+        private void AddColleges(College college)
         {
             colleges.Add(college);
         }
 
-        public void Register(int studentID, int collegeID)
+        public void RegisterForCollege(int studentID, int collegeID)
         {
             if (!registrations.ContainsKey(studentID))
             {
                 registrations.Add(studentID, new List<int>());
             }
             registrations[studentID].Add(collegeID);
+        }
+
+        internal void RegisterCollege(College college)
+        {
+            AddColleges(college);
         }
 
         public IEnumerable<College> GetRegisteredColleges(int studentID)
