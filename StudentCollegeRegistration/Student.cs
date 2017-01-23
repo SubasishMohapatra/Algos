@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentCollegeRegistration
 {
-    public class Class1
+    public class Student
     {
+        public int StudentID { get; set; }
+        public string Name { get; set; }
     }
 }
