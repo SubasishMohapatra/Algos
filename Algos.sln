@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentCollegeRegistration"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{A8669904-15F6-483B-AEFD-787AA9ED646C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinglePageAlgos", "SinglePageAlgos\SinglePageAlgos.csproj", "{0709AE92-9B4C-4DD6-B098-F181F4BAC335}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A8669904-15F6-483B-AEFD-787AA9ED646C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8669904-15F6-483B-AEFD-787AA9ED646C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8669904-15F6-483B-AEFD-787AA9ED646C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0709AE92-9B4C-4DD6-B098-F181F4BAC335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0709AE92-9B4C-4DD6-B098-F181F4BAC335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0709AE92-9B4C-4DD6-B098-F181F4BAC335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0709AE92-9B4C-4DD6-B098-F181F4BAC335}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
